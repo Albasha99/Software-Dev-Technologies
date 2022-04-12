@@ -1,0 +1,16 @@
+<div class="nav-container">
+    <div>
+        <a href="/">Home</a>
+        <a href="/products">Products</a>
+        <a href="/faq">FAQ</a>
+        <a href="/contact">Contact Us</a>
+    </div>
+    <div *ngIf="!userInput">
+        <a (click)="login()">Login</a>
+        <a href="/signup">Sign up</a>
+    </div>
+    <div *ngIf="userInput" class="profile-container">
+        <a href="/profile">{{getDisplayName()}}</a>
+        <div class="profile-picture"></div>
+    </div>
+</div>

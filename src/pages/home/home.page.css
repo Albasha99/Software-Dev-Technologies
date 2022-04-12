@@ -1,0 +1,41 @@
+.home-page {
+    background-color: #c4c4c4;
+    width: 100%;
+}
+
+.home-header, .home-header img {
+    width: 100%;
+}
+
+.products-container {
+    margin: 10px;
+    background-color: white;
+    position: relative;
+}
+
+.products-container h1 {
+    margin: 0;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 50px;
+    margin: 0 30px;
+}
+
+.product-grid img {
+    width: 100%;
+}
+
+.product-square {
+    text-align: center;
+}
+
+.back {
+    position: absolute;
+    left: 0;
+    top: 0;
+}

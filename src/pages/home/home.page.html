@@ -1,0 +1,32 @@
+<navigation (loginEvent)="onLogin($event)" [userInput]="user"></navigation>
+
+<!-- Container -->
+<div class="home-page">
+    <!-- Header image -->
+    <div class="home-header">
+        <img src="/assets/home-header.png">
+    </div>
+
+    <!-- Category grid -->
+    <div *ngIf="!selectedCategory" class="products-container">
+        <h1>Shop by Category</h1>
+        <div class="product-grid">
+            <div *ngFor="let category of categories" class="product-square">
+                <img [src]="category.pictureUrl" (click)="onCategoryClick(category.id)" />
+                <p>{{category.name}}</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product grid -->
+    <div *ngIf="selectedCategory" class="products-container">
+        <h1 class="back" (click)="onBackToCategories()">Back</h1>
+        <h1>Products</h1>
+        <div class="product-grid">
+            <div *ngFor="let product of products" class="product-square">
+                <img [src]="product.pictureUrls[0]" (click)="onProductClick(product)" />
+                <p>{{product.name}}</p>
+            </div>
+        </div>
+    </div>
+</div>
