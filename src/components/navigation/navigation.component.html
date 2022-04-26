@@ -5,11 +5,11 @@
         <a href="/faq">FAQ</a>
         <a href="/contact">Contact Us</a>
     </div>
-    <div *ngIf="!userInput">
+    <div id="login" *ngIf="!userInput">
         <a (click)="login()">Login</a>
         <a href="/signup">Sign up</a>
     </div>
-    <div *ngIf="userInput" class="profile-container">
+    <div id="profile" *ngIf="userInput" class="profile-container">
         <a href="/profile">{{getDisplayName()}}</a>
         <div class="profile-picture"></div>
     </div>

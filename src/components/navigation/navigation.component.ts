@@ -7,7 +7,7 @@ import { User } from 'src/models/user.model';
   styleUrls: ['./navigation.component.css']
 })
 export class NavigationComponent {
-    /*
+    /**
      * The logged in user. Null, if there is no logged in user.
      */
     @Input() userInput?: User;
@@ -24,7 +24,9 @@ export class NavigationComponent {
         if (this.userInput) {
             name = this.userInput.firstName[0].toUpperCase();
             name += '. ';
-            name += this.userInput.lastName;
+
+            name += this.userInput.lastName[0].toUpperCase();
+            name += this.userInput.lastName.substring(1).toLowerCase();
         }
 
         return name;
