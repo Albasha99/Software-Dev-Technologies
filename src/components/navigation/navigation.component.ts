@@ -7,7 +7,7 @@ import { User } from 'src/models/user.model';
   styleUrls: ['./navigation.component.css']
 })
 export class NavigationComponent {
-    /**
+    /*
      * The logged in user. Null, if there is no logged in user.
      */
     @Input() userInput?: User;

@@ -1,0 +1,17 @@
+<navigation [userInput]="user"></navigation>
+
+<div class="form-container">
+    <h1>Login to make a purchase!</h1>
+
+    <form (submit)="onSubmit($event)">
+        <label for="username">Email:</label>
+        <input id="username" type="text" name="username" />
+
+        <label for="password">Password:</label>
+        <input id="password" type="password" name="password" />
+
+        <input type="submit" value="Login" />
+
+        <a href="">Forgot password? Click here</a>
+    </form>
+</div>

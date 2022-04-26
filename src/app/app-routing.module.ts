@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ContactPage } from 'src/pages/contact/contact.page';
 import { FaqPage } from 'src/pages/faq/faq.page';
 import { HomePage } from 'src/pages/home/home.page';
+import { LoginPage } from 'src/pages/login/login.page';
 import { ProductsPage } from 'src/pages/products/products.page';
 
 const routes: Routes = [
@@ -10,11 +11,12 @@ const routes: Routes = [
     { path: '', component: HomePage },
     { path: 'products', component: ProductsPage },
     { path: 'faq', component: FaqPage },
-    { path: 'contact', component: ContactPage }
+    { path: 'contact', component: ContactPage },
+    { path: 'login', component: LoginPage }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+    imports: [RouterModule.forRoot(routes)],
+    exports: [RouterModule]
 })
 export class AppRoutingModule { }
